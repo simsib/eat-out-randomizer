@@ -1,11 +1,14 @@
 var path = require('path');
 
 module.exports = {
-    entry: "./index.js",
+    entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname,'builds'),
         filename: "bundle.js",
         publicPath: '/builds/'
+    },
+    devServer:{
+        contentBase: 'src'
     },
     module: {
         loaders: [
