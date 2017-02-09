@@ -38,3 +38,7 @@ docs/api/
 
 # DotEnv
 .env
+
+# CUSTOM
+# Build folder
+/builds
