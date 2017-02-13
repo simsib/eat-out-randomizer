@@ -1,5 +1,4 @@
 import React from 'react';
-import {render} from 'react-dom';
 
 export default class MainSection extends React.Component {
     render () {
@@ -12,7 +11,7 @@ export default class MainSection extends React.Component {
                         random me some food..
                     </div>
                     <div className="row center">
-                        <a href="#" id="download-button" className="btn-large waves-effect waves-light orange">Roll</a>
+                        <a id="download-button" className="btn-large waves-effect waves-light orange">Roll</a>
                     </div>
                     <br/><br/>
                 </div>
