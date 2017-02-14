@@ -3,8 +3,8 @@ import React from 'react';
 class RollButton extends React.Component {
     render() {
         return (
-            <div>
-                
+            <div className="row center">
+                <a className="btn-large waves-effect waves-light orange">Roll</a>
             </div>
         );
     }

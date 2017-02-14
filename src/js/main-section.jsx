@@ -1,4 +1,6 @@
 import React from 'react';
+import RollButton from './roll-button.jsx';
+import PlacesList from './places-list.jsx';
 
 export default class MainSection extends React.Component {
     render () {
@@ -7,12 +9,8 @@ export default class MainSection extends React.Component {
                 <div className="container">
                     <br/><br/>
                     <h1 className="header center orange-text">Whoop Whoop!</h1>
-                    <div className="row center">
-                        random me some food..
-                    </div>
-                    <div className="row center">
-                        <a id="download-button" className="btn-large waves-effect waves-light orange">Roll</a>
-                    </div>
+                    <PlacesList places={['Chinese','Wok','Pizza','Burger','Hot Dog']}></PlacesList>
+                    <RollButton></RollButton>
                     <br/><br/>
                 </div>
             </div>
