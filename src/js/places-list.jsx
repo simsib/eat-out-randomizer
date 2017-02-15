@@ -4,9 +4,11 @@ class PlacesList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            active: Math.floor(Math.random() * props.places.length)
+            active: props.activeItem
         }
-        console.log(this.state.active);
+    }
+    componentWillReceiveProps(nextProps){
+        this.setState({active:nextProps.activeItem})
     }
     renderPlaces() {
         return this.props.places.map(
