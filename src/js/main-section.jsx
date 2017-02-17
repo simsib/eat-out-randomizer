@@ -1,15 +1,22 @@
 import React from 'react';
 import RollButton from './roll-button.jsx';
 import PlacesList from './places-list.jsx';
+import FetchApi from '../helpers/fetch';
 
 export default class MainSection extends React.Component {
     constructor(props) {
         super(props);
-        let places = ['Chinese', 'Wok', 'Pizza', 'Burger', 'Hot Dog'];
+        let places = [];
         this.state = {
             places: places,
-            active: this.randomNumber(places)
+            active: -1 // because nothing was received yet
         }
+    }
+    updatePlaces(data){
+        this.setState({ places: data,active:this.randomNumber(data) })
+    }
+    componentWillMount() {
+        (new FetchApi()).getData(this.updatePlaces.bind(this));
     }
     render() {
         return (
@@ -24,10 +31,10 @@ export default class MainSection extends React.Component {
             </div>
         )
     }
-    RollHandler(){
-        this.setState({active:this.randomNumber(this.state.places)});
+    RollHandler() {
+        this.setState({ active: this.randomNumber(this.state.places) });
     }
-    randomNumber(items){
+    randomNumber(items) {
         return Math.floor(Math.random() * items.length);
     }
 };
