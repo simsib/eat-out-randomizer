@@ -1,3 +1,15 @@
 {
-	"places": ["Chinese", "Wok", "Pizza", "Burger", "Hot Dog"]
+	"places": [
+		"Chinese",
+	 	"Wok", 
+		"Pizza", 
+		"Burgers", 
+		"Hot Dogs", 
+		"Sandwiches", 
+		"Brunch",
+		"Mexican",
+		"Pasta",
+		"Salad",
+		"Vegetarian"
+		 ]
 }
