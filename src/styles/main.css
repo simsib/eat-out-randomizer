@@ -1,0 +1,11 @@
+.collection.places-list{
+    height: 100%;
+    width: 102%; 
+    overflow: auto;
+}
+
+.collection-overflow {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}

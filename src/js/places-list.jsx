@@ -7,8 +7,12 @@ class PlacesList extends Component {
             active: props.activeItem
         }
     }
-    componentWillReceiveProps(nextProps){
-        this.setState({active:nextProps.activeItem})
+    componentWillReceiveProps(nextProps) {
+//        const activeItem = document.querySelector('.active');
+//        if (activeItem){
+//            activeItem.classList.remove('active');
+//        }
+        this.setState({ active: nextProps.activeItem })
     }
     renderPlaces() {
         return this.props.places.map(
@@ -18,11 +22,16 @@ class PlacesList extends Component {
             }
         );
     }
+    componentDidUpdate(){
+        document.querySelector('.active').focus(); 
+    }
     render() {
         return (
             <div className="row center">
-                <div className="collection">
-                    {this.renderPlaces()}
+                <div className="collection-overflow">
+                    <div className="collection places-list" >
+                        {this.renderPlaces()}
+                    </div>
                 </div>
             </div>
         );
