@@ -6,7 +6,7 @@ class FetchApi {
 
     getData(callback) {
         //setTimeout(function () {
-            fetch('https://raw.githubusercontent.com/simsib/eat-out-randomizer/master/data/data.json')
+            fetch(this.path)
                 .then((response) => {
                     if (response.status !== 200) {
                         console.log(`Looks like there was a problem. Status Code: ${response.status}`);
