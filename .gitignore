@@ -42,3 +42,4 @@ docs/api/
 # CUSTOM
 # Build folder
 /builds
+/public
