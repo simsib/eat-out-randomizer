@@ -7,8 +7,8 @@ class App extends React.Component {
   render () {
     return (
       <div>
-          <NavBar name={'EAT OUT randomizer'} color={'teal'}></NavBar>{/*light-blue*/}
-          <MainSection></MainSection>
+          <NavBar name={'eat out randomizer'} color={'teal'}></NavBar>{/*light-blue*/}
+          <MainSection header={'Whoop Whoop!'}></MainSection>
           {/*<Footer></Footer>*/}
       </div>);
   }
