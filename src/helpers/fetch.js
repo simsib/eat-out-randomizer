@@ -4,8 +4,9 @@ class FetchApi {
         this.path = 'https://raw.githubusercontent.com/simsib/eat-out-randomizer/master/data/data.json';
     }
 
-    getData(callback) {
-        //setTimeout(function () {
+    getData() {
+        return new Promise((resolve, reject) => {
+
             fetch(this.path)
                 .then((response) => {
                     if (response.status !== 200) {
@@ -13,13 +14,17 @@ class FetchApi {
                         return;
                     }
                     response.json().then((data) => {
-                        callback(data.places);
+                        setTimeout(function () {
+                            resolve(data.places);
+                        }, 300);
                     });
                 })
                 .catch((err) => {
+                    reject('Fetch Error :-S ' + err);
                     console.log('Fetch Error :-S', err);
                 });
-        //}, 1000);
+
+        });
     }
 }
 
