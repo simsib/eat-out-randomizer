@@ -9,3 +9,7 @@
     width: 100%;
     overflow: hidden;
 }
+
+nav .brand-logo {
+    font-size: 1.6rem;
+}
