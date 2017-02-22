@@ -8,22 +8,11 @@ class PlacesList extends Component {
         }
     }
     componentWillReceiveProps(nextProps) {
-//        const activeItem = document.querySelector('.active');
-//        if (activeItem){
-//            activeItem.classList.remove('active');
-//        }
         this.setState({ active: nextProps.activeItem })
     }
-    renderPlaces() {
-        return this.props.places.map(
-            (place, i) => {
-                let isActive = this.state.active === i ? 'active' : '';
-                return <a href="#!" key={i} className={"collection-item " + isActive}>{place}</a>
-            }
-        );
-    }
-    componentDidUpdate(){
-        document.querySelector('.active').focus(); 
+
+    componentDidUpdate() {
+        document.querySelector('.active').focus();
     }
     render() {
         return (
@@ -34,6 +23,14 @@ class PlacesList extends Component {
                     </div>
                 </div>
             </div>
+        );
+    }
+    renderPlaces() {
+        return this.props.places.map(
+            (place, i) => {
+                let isActive = this.state.active === i ? 'active' : '';
+                return <a href="#!" key={i} className={"collection-item " + isActive}>{place}</a>
+            }
         );
     }
 }
