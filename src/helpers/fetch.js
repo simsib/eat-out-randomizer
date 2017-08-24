@@ -1,7 +1,7 @@
 
 class FetchApi {
     constructor(props) {
-        this.path = 'https://raw.githubusercontent.com/simsib/eat-out-randomizer/master/data/data.json';
+        this.path = 'https://gist.githubusercontent.com/simsib/c7301eb56c14b35601ece8fff9e86bab/raw/3f3782e35d93a66a3fd3dd8b97a4a8870c983c4a/eat-out-randomizer-places.json';
     }
 
     getData() {

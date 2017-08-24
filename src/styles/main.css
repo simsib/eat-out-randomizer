@@ -5,7 +5,7 @@
 }
 
 .collection-overflow {
-    height: 200px;
+    height: 50vh;
     width: 100%;
     overflow: hidden;
 }
